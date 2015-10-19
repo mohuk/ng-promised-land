@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="app">
+	<div class="container" ng-controller="List as vm">
+    <h2>A visit to the Promised land in Angular JS</h2>
+    <table class="table">
+      <thead>
+          <th>Name</th>
+          <th>Secret Identity</th>
+          <th>Location</th>
+          <th>Alias</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in vm.list">
+          <td ng-bind="item.name"></td>
+          <td ng-bind="item.secret"></td>
+          <td ng-bind="item.location"></td>
+          <td ng-bind="item.alias"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" ng-click="vm.add()">Add + </button>
+	</div>
+
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script type="text/javascript" src="src/app.js"></script>
+  <script type="text/javascript" src="src/http.factory.js"></script>
+  <script type="text/javascript" src="src/List.controller.js"></script>
+
+</body>
+</html>
